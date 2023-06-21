@@ -40,9 +40,12 @@
     GRAPHICS: RENOIR (Renoir, LLVM 15.0.6, DRM 3.47, 5.19.0-45-generic)
     VERSION:  Python 3.10.6
 
+
 ## Resources
 
-Please, if not fail the script, the environment or your operative system then you need to dive in the documentation's dependencies.
+
+    Please, if not fail the script, the environment or your operative system then you need to dive into the documentation's dependencies.
+
 
 - [pyTTSx3](https://github.com/nateshmbhat/pyttsx3)
 
