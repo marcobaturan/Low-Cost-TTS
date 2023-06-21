@@ -13,6 +13,7 @@ import time
 from playsound import playsound
 import sounddevice as sd
 from scipy.io.wavfile import write
+from gtts import gTTS
 
 
 # Learning phase
@@ -122,6 +123,14 @@ def pronunciation_phase(language):
             # Play
             playsound(audio_file)
         else:
+            # Pronounce the unknown word using gTTS
+            message = gTTS(text=word, lang=language, slow=False)
+            message.save("unknown.wav")
+            playsound("unknown.wav")
+    for word in sentence.split():
+        if word in words:
+            pass
+        else:            
             response = input(f"The word '{word}' is not in the pronunciation list. Do you want to record it? (y/n): ")
             # sub-routine to get new word and new sound
             if response.lower() == "y":
