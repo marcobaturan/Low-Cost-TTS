@@ -1,9 +1,9 @@
-# Low Cost TTS
+# Low-Cost TTS
 
-    Module for computational low cost custom TTS.
-    Working as alternative to ML cloning voice. 
+    Module for computational low-cost custom TTS.
+    Working as an alternative to ML cloning voice. 
     And avoid the problem of a computer without
-    many RAM or CPU or GPU. It is useful for
+    much RAM or CPU or GPU. It is useful for
     Cloning a basic human voice. 
 
 ## Warranty
@@ -16,8 +16,9 @@
     $ pip install -r requirements.txt 
     $ python main.py
 
-    You need a vocabulary file in the main folder with the 1000 to 3000 most frequent words in the
-    language target. The example in the folder is just for orientation.
+    You need a vocabulary file in the main folder with 1000 to 3000 most frequent words in the
+    language target. Or get a big batch from your text dataset extracted from your data mining.
+    The example in the folder is just for orientation.
 
 ## Folder structure
 
@@ -36,5 +37,5 @@
     HW:       HP Laptop
     RAM:      15 GiB
     CPU:      AMD Ryzen 7 4700U with Radeon Graphics × 8 
-    GRAPHICS: RENOIR (renoir, LLVM 15.0.6, DRM 3.47, 5.19.0-45-generic)
+    GRAPHICS: RENOIR (Renoir, LLVM 15.0.6, DRM 3.47, 5.19.0-45-generic)
     VERSION:  Python 3.10.6
