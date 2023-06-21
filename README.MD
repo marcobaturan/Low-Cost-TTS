@@ -44,9 +44,16 @@
 ## Resources
 
 
-    Please, if not fail the script, the environment or your operative system then you need to dive into the documentation's dependencies.
+    Please, if not fail the script, the environment or your operative system then you need to 
+    dive into the documentation's dependencies.
 
 
 - [pyTTSx3](https://github.com/nateshmbhat/pyttsx3)
 
 - [gTTS](https://gtts.readthedocs.io/en/latest/)
+
+- [Playsound](https://github.com/TaylorSMarks/playsound)
+
+- [SoundDevice](https://python-sounddevice.readthedocs.io/en/0.4.6/)
+
+- [SciPy](https://pypi.org/project/scipy/)
