@@ -1,8 +1,8 @@
-"""Low Cost Text To Speech.
+""" Low-Cost Text To Speech.
 
-    This module is for make a custom TTS with the voice of the user.
+    This module is for making a custom TTS with the voice of the user.
     It is an alternative to the cloning voice with Ml technics.
-    It is useful for low cost computational resources.
+    It is useful for low-cost computational resources.
     And suitable for low consume chatbots.
 
 """
@@ -34,7 +34,7 @@ def learning_phase(language):
         to record every word with the associated sound.
 
         The sound is stored in the language folder: pronunciation_{lang}
-        Until the learning cycle is end.
+        Until the learning cycle ends.
 
     """
     pronunciation_folder = "pronunciation_" + language
@@ -89,18 +89,18 @@ def learning_phase(language):
 
 # Pronunciation phase
 def pronunciation_phase(language):
-    """Pronunciation phase.
+    """ Pronunciation phase.
 
         The function is called by the menu.
         Load the vocabulary.txt into a list called words.
         The prompt ask for a phrase and the procedure
-        read and list every word. and compare with the
+        read and list every word. and compare it with the
         records listed in the language folder.
         Then assembled in order to play.
 
-        In case of fail to play a word the program
-        activate a subroutine which ask for the word
-        in the phrase and record new audio to store.
+        In case of failure to play a word, the program
+        activates a subroutine that asks for the word
+        in the phrase and records new audio to store.
         Add the new word into vocabulary.txt.
 
 
@@ -172,7 +172,7 @@ def pronunciation_phase(language):
 
 # Main program
 def main():
-    """Main.
+    """ Main.
 
         Control flow of the program.
         Where is placed the functions,
