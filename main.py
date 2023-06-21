@@ -14,6 +14,7 @@ from playsound import playsound
 import sounddevice as sd
 from scipy.io.wavfile import write
 from gtts import gTTS
+import pyttsx3
 
 
 # Learning phase
@@ -23,7 +24,7 @@ def learning_phase(language):
         The function is called by the menu.
         Create a specific folder in a defined language
         based in abbreviated international code (es, en ...)
-        Load a list between 1000 to 3000 more
+        Load a list between 1000 and 3000 more
         frequently used words in a language.
         From a text file. The user can load in the
         project another vocabulary.
@@ -123,10 +124,20 @@ def pronunciation_phase(language):
             # Play
             playsound(audio_file)
         else:
-            # Pronounce the unknown word using gTTS
-            message = gTTS(text=word, lang=language, slow=False)
-            message.save("unknown.wav")
-            playsound("unknown.wav")
+            try:
+                # Pronounce the unknown word using gTTS
+                print('Low-Cost TTS failed, switching to gTTS...')
+                message = gTTS(text=word, lang=language, slow=False)
+                message.save("unknown.wav")
+                playsound("unknown.wav")
+            except:
+                # If gTTS fails, switch to pyTTSx3
+                print('gTTS failed, switching to pyTTSx3...')
+                engine = pyttsx3.init()
+                engine.setProperty('voice', language)
+                engine.say(word)
+                engine.runAndWait()
+
     for word in sentence.split():
         if word in words:
             pass
