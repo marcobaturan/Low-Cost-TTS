@@ -46,6 +46,100 @@
     GRAPHICS: RENOIR (Renoir, LLVM 15.0.6, DRM 3.47, 5.19.0-45-generic)
     VERSION:  Python 3.10.6
 
+## Workflow
+
+    $ python3 main.py
+
+### Dialog
+
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 1
+    Enter the language you want to learn: es
+    Word: hola
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Word: amigo
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Word: mio
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Learning finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: hola
+    Invalid folder choice.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: 1
+    Enter a sentence: hola
+    Pronunciation finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 1
+    Enter the language you want to learn: es
+    Word: hola
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Word: amigo
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Word: mio
+    Speak the word or press Enter to skip:
+    Press Enter to continue...
+    Learning finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: 1
+    Enter a sentence: hola
+    Pronunciation finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: 1
+    Enter a sentence: hola amigo
+    Pronunciation finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: 1
+    Enter a sentence: hola amigo mio
+    Pronunciation finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 2
+    Existing language folders:
+    1. pronunciation_es
+    Enter the number of the folder you want to continue with: 1
+    Enter a sentence: amigo mio
+    Pronunciation finished.
+    1. Start learning phase
+    2. Start pronunciation phase
+    3. Exit
+    Enter your choice: 3
+
 
 ## Resources
 
