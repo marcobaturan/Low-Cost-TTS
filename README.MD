@@ -5,6 +5,12 @@
     And avoid the problem of a computer without
     much RAM or CPU or GPU. It is useful for
     Cloning a basic human voice. 
+    In this URL, you can find a list in many languages of the frequent basic 1000
+    words, just copy the list into vocabulary.txt and then start to teach to
+    the computer to imitate your voice.
+    
+- [1000 most common words in many languages](https://github.com/bukowa/1000-common-words/blob/master/Spanish-1000-common.txt)
+
 
 ## Warranty
 

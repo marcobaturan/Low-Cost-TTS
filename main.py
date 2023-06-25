@@ -15,6 +15,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 from gtts import gTTS
 import pyttsx3
+import keyboard
 
 
 # Learning phase
@@ -47,11 +48,18 @@ def learning_phase(language):
     with open('vocabulary.txt', 'r') as file:
         for line in file:
             words.append(line.strip())
-
+    # Get pronunciation folder filenames
+    pronunciation_list = os.listdir(pronunciation_folder)
+    pronunciation_list = [filename.split('.')[0] for filename in pronunciation_list]
+    # Create a list of missing words in the pronunciation list
+    missing_words = [word for word in words if word not in pronunciation_list]
+    # Show missing words in pronunciation list
+    print("Missing words in pronunciation list:")
+    print(len(missing_words))
     current_word_index = 0
 
-    while current_word_index < len(words):
-        current_word = words[current_word_index]
+    while current_word_index < len(missing_words): # old words variable list
+        current_word = missing_words[current_word_index]  # old words variable list
         print("Word:", current_word)
 
         audio_file = os.path.join(pronunciation_folder, current_word + ".wav")
@@ -63,7 +71,7 @@ def learning_phase(language):
         is_recording = False
         silent_frames = 0
 
-        print("Speak the word or press Enter to skip:")
+        print("Speak the word after press enter")
         while True:
 
             if not is_recording:
@@ -77,7 +85,7 @@ def learning_phase(language):
 
         # Save audio to file
         # Record
-        input(f'Press Enter to record, pay atention, is around {seconds} sec.')
+        input(f'Press Enter to record, pay attention, is around {seconds} sec.')
         recording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
         sd.wait()  # Wait until recording is finished
         write(audio_file, fs, recording)  # Save as WAV file
@@ -111,18 +119,24 @@ def pronunciation_phase(language):
     with open('vocabulary.txt', 'r') as file:
         for line in file:
             words.append(line.strip())
-    print(words)
-    # words = ["hola", "amigo", "mio"]  # Replace with your list of words
 
     sentence = input("Enter a sentence: ")
-
+    file_names = []
     for word in sentence.split():
         if word in words:
             # Pronounce the word
             audio_file = os.path.join(pronunciation_folder, word + ".wav")
             # Code to play the audio file goes here
+            from pydub import AudioSegment
+            # Cargar la muestra sonora desde un archivo WAV
+            sound = AudioSegment.from_wav(audio_file)
+            # Duración en milisegundos de la atenuación gradual
+            # Aplicar la atenuación gradual al principio y al final de la muestra sonora
+            sound = sound.fade_in(100).fade_out(100)
+            # Exportar la muestra sonora con la atenuación gradual aplicada
+            sound.export("output.wav", format="wav")
             # Play
-            playsound(audio_file)
+            playsound("output.wav")
         else:
             try:
                 # Pronounce the unknown word using gTTS
