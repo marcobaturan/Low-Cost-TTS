@@ -15,7 +15,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 from gtts import gTTS
 import pyttsx3
-import keyboard
+from pydub import AudioSegment
 
 
 # Learning phase
@@ -119,15 +119,12 @@ def pronunciation_phase(language):
     with open('vocabulary.txt', 'r') as file:
         for line in file:
             words.append(line.strip())
-
     sentence = input("Enter a sentence: ")
     file_names = []
     for word in sentence.split():
-        if word in words:
+        if word in words and os.path.isfile(os.path.join(pronunciation_folder, word + ".wav")):
             # Pronounce the word
             audio_file = os.path.join(pronunciation_folder, word + ".wav")
-            # Code to play the audio file goes here
-            from pydub import AudioSegment
             # Cargar la muestra sonora desde un archivo WAV
             sound = AudioSegment.from_wav(audio_file)
             # Duración en milisegundos de la atenuación gradual
