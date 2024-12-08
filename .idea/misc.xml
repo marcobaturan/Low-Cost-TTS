@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.11 (Low-Cost-TTS)" />
+  </component>
   <component name="ProjectConfig">
     <option name="importPaths">
       <list />
@@ -7,5 +10,5 @@
     <option name="jsonFile" value=".api-linter.json" />
     <option name="yamlFile" value=".api-linter.yaml" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (Low-Cost-TTS)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (Low-Cost-TTS)" project-jdk-type="Python SDK" />
 </project>

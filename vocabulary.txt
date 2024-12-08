@@ -1031,3 +1031,7 @@ continente
 robots
 hola
 robot
+Te
+voy
+halar
+te
